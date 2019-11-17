@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fájl">
+               <items>
+                  <MenuItem fx:id="save" mnemonicParsing="false" text="Mentés" />
+                  <MenuItem fx:id="saveToFile" mnemonicParsing="false" text="Mentés fájlba" />
+                  <MenuItem fx:id="loadFromFile" mnemonicParsing="false" text="Megnyitás fájlból" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exit" mnemonicParsing="false" text="Kilépés" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Szerkesztés">
+            <items>
+                  <MenuItem fx:id="closeStandItem" mnemonicParsing="false" text="Stand lezárása" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="newProduct" mnemonicParsing="false" text="Termék felvétele" />
+                  <MenuItem fx:id="editProduct" mnemonicParsing="false" text="Termék szerkesztése" />
+                  <MenuItem fx:id="delProduct" mnemonicParsing="false" text="Termék törlése" />
+                  <MenuItem fx:id="sales" mnemonicParsing="false" text="Akciós termékek" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="switchUser" mnemonicParsing="false" text="Felhasználó váltás" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="settings" mnemonicParsing="false" text="Beállítások" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Súgó">
+            <items>
+              <MenuItem fx:id="help" mnemonicParsing="false" text="Segítség" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

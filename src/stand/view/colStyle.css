@@ -1,0 +1,5 @@
+.table-cell:column-hover {
+	-fx-background-color: -fx-cell-focus-inner-border, -fx-selection-bar ;
+	-fx-background-insets: 0, 0 0 1 0 ;
+	-fx-background: -fx-selectin-bar ;
+}

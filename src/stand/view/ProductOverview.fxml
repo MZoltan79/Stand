@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane minHeight="300.0" minWidth="600.0" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stand.view.ProductOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="450.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+        <items>
+          <AnchorPane minHeight="300.0" prefHeight="300.0">
+               <children>
+                  <TableView fx:id="productTable" editable="true" maxHeight="1.7976931348623157E308" minHeight="400.0" prefHeight="600.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="productIdColumn" prefWidth="70.0" text="Sorszám" />
+                      <TableColumn fx:id="productNameColumn" prefWidth="97.0" text="Megnevezés" />
+                        <TableColumn fx:id="productOpeningColumn" prefWidth="50.0" text="Nyitó" />
+                        <TableColumn fx:id="productBuyColumn" prefWidth="55.0" text="Vétel" />
+                        <TableColumn fx:id="productQuantityColumn" prefWidth="82.0" text="Összesen" />
+                        <TableColumn fx:id="productClosingColumn" prefWidth="48.0" text="Záró" />
+                        <TableColumn fx:id="productConsumptionColumn" prefWidth="59.0" text="Fogyás" />
+                        <TableColumn fx:id="productPriceColumn" prefWidth="69.0" text="Ár" />
+                        <TableColumn fx:id="productSumPriceColumn" prefWidth="71.0" text="Összeg" />
+                        <TableColumn fx:id="productPrevClosingColumn" prefWidth="99.0" text="Előző záró" />
+                        <TableColumn fx:id="productOpenMinPrevCloseColumn" text="Nyitó - EZ" />
+                        <TableColumn fx:id="productDiffColumn" prefWidth="60.0" text="Eltérés" />
+                        <TableColumn fx:id="fromNovohost" prefWidth="57.0" text="Akció" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="150.0" minHeight="120.0" prefHeight="120.0">
+               <children>
+                  <GridPane maxWidth="460.0" minWidth="215.0" prefHeight="120.0" prefWidth="380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="513.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="133.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="247.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Stand összege:" />
+                        <Label text="Eltérés összege:" GridPane.rowIndex="1" />
+                        <Label fx:id="salesIndicatorLabel" text="Akciók:" GridPane.rowIndex="3" />
+                        <Label fx:id="sumStandLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="sumDiffLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="salesLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></Label>
+                     </children>
+                  </GridPane>
+                  <TextArea fx:id="notes" layoutX="498.0" layoutY="-47.0" prefHeight="120.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label layoutX="449.0" layoutY="6.0" text="Megjegyzések:" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="449.0" AnchorPane.topAnchor="6.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ButtonBar buttonMinWidth="25.0" layoutX="21.0" maxHeight="30.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <buttons>
+            <Button fx:id="closeStandButton" layoutX="825.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleCloseStandButton">
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@lock-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="openButton" layoutX="825.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleOpenButton" prefHeight="26.0">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@open-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="saveAsButton" layoutX="825.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSaveAsButton">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Save-as-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+          <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveButton">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@save-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+        </buttons>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>

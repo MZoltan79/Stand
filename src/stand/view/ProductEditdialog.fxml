@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="202.0" minWidth="300.0" prefHeight="202.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stand.view.ProductEditDialogController">
+   <children>
+      <ButtonBar layoutX="379.0" layoutY="338.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" text="Mégse" />
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+        </buttons>
+      </ButtonBar>
+      <Label layoutX="5.0" layoutY="60.0" text="Termék:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="5.0" layoutY="102.0" text="Ár:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="102.0" />
+      <TextField fx:id="nameField" layoutX="90.0" layoutY="55.0" prefWidth="190.0" promptText="Termék megnevezése" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="57.0" />
+      <TextField fx:id="priceField" layoutX="90.0" layoutY="95.0" prefWidth="190.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="95.0" />
+      <Label layoutX="6.0" layoutY="20.0" text="Sorszám:" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="idField" layoutX="90.0" layoutY="15.0" prefHeight="26.0" prefWidth="190.0" promptText="Termék sorszáma" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0" />
+   </children>
+</AnchorPane>
